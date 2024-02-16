@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="postStudyRecruit"
+            type="com.codelap.waglegamoon.data.model.PostStudyRecruit" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +23,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="모집중"
+            android:text="@{postStudyRecruit.recruitState}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +37,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="공부분야"
+            android:text="@{postStudyRecruit.studyFiled}"
             app:layout_constraintStart_toEndOf="@id/tv_recruit_state"
             app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
 
@@ -49,7 +51,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="지역"
+            android:text="@{postStudyRecruit.location}"
             app:layout_constraintStart_toEndOf="@id/tv_recruit_study_filed"
             app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
 
@@ -59,7 +61,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="개발 스터디 구합니다."
+            android:text="@{postStudyRecruit.postTitle}"
             app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
             app:layout_constraintTop_toBottomOf="@id/tv_recruit_state" />
 
@@ -69,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="오늘 15:20"
+            android:text="@{postStudyRecruit.date}"
             app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
             app:layout_constraintTop_toBottomOf="@id/tv_post_recruit_title" />
 
@@ -79,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
-            android:text="닉네임"
+            android:text="@{postStudyRecruit.nickname}"
             app:layout_constraintStart_toEndOf="@id/tv_post_recruit_date"
             app:layout_constraintTop_toTopOf="@id/tv_post_recruit_date" />
 
