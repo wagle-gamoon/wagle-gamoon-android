@@ -26,6 +26,10 @@ class HomeStudyRecruitFragment : BaseFragment<FragmentHomeStudyRecruitBinding>(R
             toolbarStudy.setNavigationOnClickListener {
                 findNavController().navigateUp()
             }
+            ibPostWriteButton.setOnClickListener {
+                val action = HomeStudyRecruitFragmentDirections.actionHomeStudyRecruitToHomeStudyRecruitWrite()
+                findNavController().navigate(action)
+            }
         }
     }
 }

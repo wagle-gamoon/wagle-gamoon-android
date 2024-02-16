@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_post_study_recruit_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="스터디 글쓰기"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/customTextViewFontStyle.medium.S16.black" />
+
+        <EditText
+            android:id="@+id/et_input_other"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="22dp"
+            android:background="@android:color/transparent"
+            android:hint="모집대상"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_post_study_recruit_write"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_input_study_field"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/transparent"
+            android:hint="분야"
+            app:layout_constraintEnd_toEndOf="@id/et_input_other"
+            app:layout_constraintStart_toStartOf="@id/et_input_other"
+            app:layout_constraintTop_toBottomOf="@id/et_input_other"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_input_location"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/transparent"
+            android:hint="장소"
+            app:layout_constraintEnd_toEndOf="@id/et_input_other"
+            app:layout_constraintStart_toStartOf="@id/et_input_other"
+            app:layout_constraintTop_toBottomOf="@id/et_input_study_field"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_input_recruit_total_member"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/transparent"
+            android:hint="현재인원/모집인원"
+            app:layout_constraintEnd_toEndOf="@id/et_input_other"
+            app:layout_constraintStart_toStartOf="@id/et_input_other"
+            app:layout_constraintTop_toBottomOf="@id/et_input_location"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_input_post_title"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            app:layout_constraintStart_toStartOf="@id/et_input_other"
+            app:layout_constraintEnd_toEndOf="@id/et_input_other"
+            app:layout_constraintTop_toBottomOf="@id/et_input_recruit_total_member"
+            android:background="@android:color/transparent"
+            android:hint="제목" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_post_write"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input_post_title"
+            app:dividerInsetStart="20dp"
+            app:dividerInsetEnd="20dp" />
+
+        <EditText
+            android:id="@+id/et_input_post_content"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/transparent"
+            android:hint="현재인원/모집인원"
+            android:gravity="top"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="@id/et_input_other"
+            app:layout_constraintStart_toStartOf="@id/et_input_other"
+            app:layout_constraintTop_toBottomOf="@id/et_input_post_title"
+            app:layout_constraintBottom_toTopOf="@id/btn_post_write_confirm"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_post_write_confirm"
+            style="@style/customTextViewFontStyle.medium.S16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:background="@drawable/shape_rounded_15dp_blue_main"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            app:layout_constraintStart_toStartOf="@id/et_input_study_field"
+            app:layout_constraintEnd_toEndOf="@id/et_input_study_field"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="29dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
