@@ -10,14 +10,113 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="마이페이지"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/customTextViewFontStyle.S20" />
+
+        <ImageView
+            android:id="@+id/iv_profile_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="프로필"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_profile_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_profile" />
+
+        <TextView
+            android:id="@+id/tv_profile_nickname"
+            style="@style/customTextViewFontStyle.medium.S18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Tnalxmsk"
+            app:layout_constraintStart_toEndOf="@+id/iv_profile_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile_icon" />
+
+        <TextView
+            android:id="@+id/tv_profile_id"
+            style="@style/customTextViewFontStyle.S12.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="minsu12"
+            app:layout_constraintStart_toStartOf="@id/tv_profile_nickname"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_nickname" />
+
+        <TextView
+            android:id="@+id/tv_profile_student_number"
+            style="@style/customTextViewFontStyle.S12.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:text="22학번"
+            app:layout_constraintStart_toEndOf="@id/tv_profile_id"
+            app:layout_constraintTop_toTopOf="@id/tv_profile_id" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="25dp"
+            android:id="@+id/layout_profile_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_15dp_white"
+            android:elevation="2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/iv_profile_icon" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_contact_style"
+                style="@style/customTextViewFontStyle.medium.S14"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_rounded_15dp_blue_light"
+                android:text="대면"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_my_style"
+                style="@style/customTextViewFontStyle.medium.S14"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/shape_rounded_15dp_blue_light"
+                android:text="대면"
+                app:layout_constraintStart_toEndOf="@id/tv_profile_contact_style"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_profile_meet_style"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_meet_style"
+                style="@style/customTextViewFontStyle.medium.S14"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="28dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/shape_rounded_15dp_blue_light"
+                android:text="대면"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
