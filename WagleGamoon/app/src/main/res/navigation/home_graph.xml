@@ -9,7 +9,14 @@
         android:id="@+id/navigation_home"
         android:name="com.codelap.waglegamoon.ui.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_home_free_post"
+            app:destination="@id/navigation_home_free_post" />
+        <action
+            android:id="@+id/action_home_to_home_question_post"
+            app:destination="@id/navigation_home_question_post" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_matching"
         android:name="com.codelap.waglegamoon.ui.matching.MatchingFragment"
@@ -20,4 +27,13 @@
         android:name="com.codelap.waglegamoon.ui.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/navigation_home_free_post"
+        android:name="com.codelap.waglegamoon.ui.home.HomeFreePostFragment"
+        android:label="HomeFreePostFragment" />
+    <fragment
+        android:id="@+id/navigation_home_question_post"
+        android:name="com.codelap.waglegamoon.ui.home.HomeQuestionPostFragment"
+        android:label="HomeQuestionPostFragment" />
+
 </navigation>
