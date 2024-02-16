@@ -38,10 +38,37 @@
         <item name="android:fontFamily">@font/ibm_plex_sans_kr_light</item>
     </style>
 
+    <style name="customTextViewFontStyle.light.S12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
 
     <!--  Regular font  -->
+    <style name="customTextViewFontStyle.S12">
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="customTextViewFontStyle.S14">
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="customTextViewFontStyle.S12.gray_50">
+        <item name="android:textColor">@color/gray_50</item>
+    </style>
+    <style name="customTextViewFontStyle.S20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- light -->
+    <style name="customTextViewFontStyle.medium">
+        <item name="android:fontFamily">@font/ibm_plex_sans_kr_medium</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S14">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S14.gray_50">
+        <item name="android:textColor">@color/gray_50</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S18">
+        <item name="android:textSize">18sp</item>
     </style>
 
     <!--  Bold font  -->
