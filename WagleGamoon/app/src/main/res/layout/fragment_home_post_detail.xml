@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_post_study_recruit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="게시글"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/customTextViewFontStyle.medium.S16.black" />
+
+        <ImageView
+            android:id="@+id/iv_circle_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_account_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_post_study_recruit_detail" />
+
+        <TextView
+            android:id="@+id/tv_recruit_detail_nickname"
+            style="@style/customTextViewFontStyle.S11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="닉네임"
+            app:layout_constraintStart_toEndOf="@id/iv_circle_image_view"
+            app:layout_constraintTop_toTopOf="@id/iv_circle_image_view" />
+
+        <TextView
+            android:id="@+id/tv_recruit_detail_date"
+            style="@style/customTextViewFontStyle.S11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020.2.16"
+            app:layout_constraintStart_toStartOf="@id/tv_recruit_detail_nickname"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruit_detail_nickname" />
+
+        <ImageView
+            android:layout_marginStart="6dp"
+            android:id="@+id/iv_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="@id/iv_circle_image_view"
+            app:layout_constraintTop_toBottomOf="@id/iv_circle_image_view" />
+
+        <TextView
+            android:id="@+id/tv_study_location"
+            style="@style/customTextViewFontStyle.S11.gray_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="성남"
+            app:layout_constraintBottom_toBottomOf="@id/iv_location_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_location_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_location_icon" />
+
+
+        <TextView
+            android:layout_marginTop="6dp"
+            style="@style/customTextViewFontStyle.medium.S17.black"
+            android:id="@+id/tv_recruit_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="토익 스터디 구합니다"
+            app:layout_constraintStart_toStartOf="@id/iv_circle_image_view"
+            app:layout_constraintTop_toBottomOf="@id/iv_location_icon" />
+
+        <TextView
+            style="@style/customTextViewFontStyle.S14"
+            android:id="@+id/tv_recruit_detail_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="16시 스타벅스 가천대점\n스터디룸에서 스터디할 사람 구합니다."
+            android:minLines="6"
+            app:layout_constraintStart_toStartOf="@id/tv_recruit_detail_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_recruit_detail_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruit_detail_title" />
+        
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            app:dividerInsetEnd="22dp"
+            app:dividerInsetStart="22dp"
+            app:dividerColor="@color/gray_10"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruit_detail_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/et_input_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="22dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:layout_marginEnd="22dp"
+            android:hint="댓글을 입력하세요"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:autofillHints="false"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/ib_comment_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@id/et_input_comment"
+            app:layout_constraintEnd_toEndOf="@id/et_input_comment"
+            app:layout_constraintBottom_toBottomOf="@id/et_input_comment"
+            android:layout_marginEnd="15dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
