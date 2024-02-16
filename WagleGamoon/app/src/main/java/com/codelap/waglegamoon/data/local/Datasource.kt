@@ -3,7 +3,7 @@ package com.codelap.waglegamoon.data.local
 import com.codelap.waglegamoon.data.model.PostStudyRecruit
 
 object Datasource {
-    fun getPostStudyList() {
+    fun getPostStudyList(): List<PostStudyRecruit> {
         val items = mutableListOf<PostStudyRecruit>()
         items.add(PostStudyRecruit(1, "모집중", "코틀린", "성남", "개발 스터디 구합니다", "오늘 15:30", "Tnalxmsk"))
         items.add(PostStudyRecruit(2,"모집중", "자바", "분당", "자바 스터디 구해요", "오늘 16:30", "자고싶다") )
@@ -13,6 +13,6 @@ object Datasource {
         items.add(PostStudyRecruit( 6,"모집중", "영어", "서울", "토익, 토스 준비 같이해요", "오늘 19:33", "무의식적으로") )
         items.add(PostStudyRecruit(7, "모집중", "학점준비", "서울", "과탑하자", "오늘 19:40", "타자를 치고 있네") )
         items.add(PostStudyRecruit(8, "모집중", "CPA", "서울", "CPA 준비하는 사람?", "오늘 20:30", "하하") )
-
+        return items
     }
 }
