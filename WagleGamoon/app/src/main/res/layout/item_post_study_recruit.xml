@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="postStudyRecruit"
             type="com.codelap.waglegamoon.data.model.PostStudyRecruit" />
+        <variable
+            name="listener"
+            type="com.codelap.waglegamoon.ui.home.adapter.PostClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:onClick="@{() -> listener.onClickPost()}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

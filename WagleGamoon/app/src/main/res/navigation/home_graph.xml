@@ -48,12 +48,20 @@
         <action
             android:id="@+id/action_home_study_recruit_to_home_study_recruit_write"
             app:destination="@id/navigation_home_study_recruit_write" />
-    </fragment>
+     <action
+         android:id="@+id/action_home_study_recruit_to_home_post_detail"
+         app:destination="@id/navigation_home_ost_detail" />
+ </fragment>
     <activity
         android:id="@+id/navigation_home_study_recruit_write"
         android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitWriteActivity"
         android:label="HomeStudyRecruitWriteActivity"
         tools:layout="@layout/activity_home_study_recruit_write"/>
+    <activity
+        android:id="@+id/navigation_home_ost_detail"
+        android:name="com.codelap.waglegamoon.ui.home.HomePostDetailActivity"
+        android:label="HomePostDetailActivity"
+        tools:layout="@layout/activity_home_post_detail"/>
 
 
 </navigation>
