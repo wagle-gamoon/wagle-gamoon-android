@@ -1,6 +1,5 @@
 package com.codelap.waglegamoon.ui.home
 
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.fragment.findNavController
 import com.codelap.waglegamoon.R
 import com.codelap.waglegamoon.base.BaseFragment
