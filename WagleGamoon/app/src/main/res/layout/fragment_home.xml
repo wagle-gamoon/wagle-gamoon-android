@@ -13,18 +13,20 @@
 
 
         <android.widget.Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_free_post_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/rectangle_button"
             android:elevation="20dp"
             android:gravity="center_vertical"
             android:paddingLeft="30dp"
             android:text="자유 게시판"
             android:textColor="#ffffff"
-            android:textSize="23dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/btn_study_recruit_button"
+            app:layout_constraintStart_toStartOf="@id/btn_study_recruit_button"
+            app:layout_constraintBottom_toTopOf="@id/btn_question_post_button"
+            android:textSize="23dp" />
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar_home"
@@ -36,7 +38,7 @@
             app:layout_constraintVertical_bias="0.55" />
 
         <android.widget.Button
-            android:id="@+id/button6"
+            android:id="@+id/btn_question_post_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_button"
@@ -46,16 +48,15 @@
             android:text="질문 게시판"
             android:textColor="#ffffff"
             android:textSize="21dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="@id/btn_study_recruit_button"
+            app:layout_constraintStart_toStartOf="@id/btn_study_recruit_button"
+            app:layout_constraintBottom_toTopOf="@id/btn_study_recruit_button"
             app:layout_constraintVertical_bias="0.75" />
 
 
         <android.widget.Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_study_recruit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_button"
@@ -78,7 +79,7 @@
             android:layout_marginLeft="40dp"
             android:text="진짜 삽질 야무지게\n하는 중"
             android:textSize="26dp"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
+            app:layout_constraintBottom_toTopOf="@+id/btn_free_post_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,11 +115,11 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:elevation="40dp"
-            app:layout_constraintBottom_toBottomOf="@+id/button5"
-            app:layout_constraintEnd_toEndOf="@+id/button5"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_free_post_button"
+            app:layout_constraintEnd_toEndOf="@+id/btn_free_post_button"
             app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="@+id/button5"
-            app:layout_constraintTop_toTopOf="@+id/button5"
+            app:layout_constraintStart_toStartOf="@+id/btn_free_post_button"
+            app:layout_constraintTop_toTopOf="@+id/btn_free_post_button"
             app:srcCompat="@drawable/arrow" />
 
         <ImageView
@@ -126,11 +127,11 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:elevation="40dp"
-            app:layout_constraintBottom_toBottomOf="@+id/button6"
-            app:layout_constraintEnd_toEndOf="@+id/button6"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_question_post_button"
+            app:layout_constraintEnd_toEndOf="@+id/btn_question_post_button"
             app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="@+id/button6"
-            app:layout_constraintTop_toTopOf="@+id/button6"
+            app:layout_constraintStart_toStartOf="@+id/btn_question_post_button"
+            app:layout_constraintTop_toTopOf="@+id/btn_question_post_button"
             app:srcCompat="@drawable/arrow" />
 
         <ImageView
@@ -138,14 +139,11 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:elevation="40dp"
-            app:layout_constraintBottom_toBottomOf="@+id/button7"
-            app:layout_constraintEnd_toEndOf="@+id/button7"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_study_recruit_button"
+            app:layout_constraintEnd_toEndOf="@+id/btn_study_recruit_button"
             app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="@+id/button7"
-            app:layout_constraintTop_toTopOf="@+id/button7"
+            app:layout_constraintStart_toStartOf="@+id/btn_study_recruit_button"
+            app:layout_constraintTop_toTopOf="@+id/btn_study_recruit_button"
             app:srcCompat="@drawable/arrow" />
-
-
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

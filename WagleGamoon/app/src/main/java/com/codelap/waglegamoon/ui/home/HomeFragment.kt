@@ -15,11 +15,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun setClickListener() {
         with(binding) {
-            button5.setOnClickListener {
+            btnFreePostButton.setOnClickListener {
                 val action = HomeFragmentDirections.actionHomeToHomeFreePost()
                 findNavController().navigate(action)
             }
-            button6.setOnClickListener {
+            btnQuestionPostButton.setOnClickListener {
                 val action = HomeFragmentDirections.actionHomeToHomeQuestionPost()
                 findNavController().navigate(action)
             }
