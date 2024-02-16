@@ -5,10 +5,12 @@ import com.codelap.waglegamoon.R
 import com.codelap.waglegamoon.base.BaseFragment
 import com.codelap.waglegamoon.data.local.Datasource
 import com.codelap.waglegamoon.databinding.FragmentHomeStudyRecruitBinding
+import com.codelap.waglegamoon.ui.home.adapter.PostClickListener
 import com.codelap.waglegamoon.ui.home.adapter.StudyRecruitAdapter
 
-class HomeStudyRecruitFragment : BaseFragment<FragmentHomeStudyRecruitBinding>(R.layout.fragment_home_study_recruit) {
-    private val adapter = StudyRecruitAdapter()
+class HomeStudyRecruitFragment : BaseFragment<FragmentHomeStudyRecruitBinding>(R.layout.fragment_home_study_recruit),
+PostClickListener {
+    private val adapter = StudyRecruitAdapter(this)
 
     override fun setLayout() {
         setClickListener()
@@ -31,5 +33,10 @@ class HomeStudyRecruitFragment : BaseFragment<FragmentHomeStudyRecruitBinding>(R
                 findNavController().navigate(action)
             }
         }
+    }
+
+    override fun onClickPost() {
+        val action = HomeStudyRecruitFragmentDirections.actionHomeStudyRecruitToHomePostDetail()
+        findNavController().navigate(action)
     }
 }
