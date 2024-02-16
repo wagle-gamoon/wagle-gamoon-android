@@ -34,7 +34,17 @@
             tools:listitem="@layout/item_post_study_recruit"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-
+        <ImageButton
+            android:id="@+id/ib_post_write_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_write_post"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="17dp"
+            android:contentDescription="@string/description_post_write_image" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_navigation_home_to_navigation_home_study_recruit"
+            android:id="@+id/action_home_to_home_study_recruit"
             app:destination="@id/navigation_home_study_recruit" />
     </fragment>
     <fragment
@@ -28,5 +28,15 @@
         android:id="@+id/navigation_home_study_recruit"
         android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitFragment"
         android:label="HomeStudyRecruitFragment"
-        tools:layout="@layout/fragment_home_study_recruit"/>
+        tools:layout="@layout/fragment_home_study_recruit">
+        <action
+            android:id="@+id/action_home_study_recruit_to_home_study_recruit_write"
+            app:destination="@id/navigation_home_study_recruit_write" />
+    </fragment>
+    <activity
+        android:id="@+id/navigation_home_study_recruit_write"
+        android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitWriteActivity"
+        android:label="HomeStudyRecruitWriteActivity"
+        tools:layout="@layout/activity_home_study_recruit_write"/>
+
 </navigation>

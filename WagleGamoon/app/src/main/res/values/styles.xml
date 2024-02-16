@@ -79,6 +79,12 @@
     <style name="customTextViewFontStyle.medium.S14">
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="customTextViewFontStyle.medium.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S16.black">
+        <item name="android:textColor">@color/black</item>
+    </style>
     <style name="customTextViewFontStyle.medium.S14.gray_50">
         <item name="android:textColor">@color/gray_50</item>
     </style>
@@ -93,6 +99,9 @@
     </style>
     <style name="customTextViewFontStyle.Bold.S14">
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="customTextViewFontStyle.Bold.S16">
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>
