@@ -26,10 +26,10 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             style="@style/BottomNavigationStyle"
-            android:background="@color/blue_light"
+            android:background="@drawable/shape_top_rounded_15dp_blue_light"
             android:id="@+id/bottom_navigation_main"
             android:layout_width="0dp"
-            android:layout_height="64dp"
+            android:layout_height="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
