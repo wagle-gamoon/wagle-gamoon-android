@@ -8,8 +8,6 @@ import com.codelap.waglegamoon.databinding.FragmentHomeBinding
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun setLayout() {
-        val action = HomeFragmentDirections.actionHomeToHomeStudyRecruit()
-        findNavController().navigate(action)
         setClickListener()
     }
 
@@ -21,6 +19,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             }
             btnQuestionPostButton.setOnClickListener {
                 val action = HomeFragmentDirections.actionHomeToHomeQuestionPost()
+                findNavController().navigate(action)
+            }
+            btnStudyRecruitButton.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeToHomeStudyRecruit()
                 findNavController().navigate(action)
             }
         }
