@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="postStudyRecruit"
+            type="com.codelap.waglegamoon.data.model.PostStudyRecruit" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_recruit_state"
+            style="@style/customTextViewFontStyle.medium.S10.white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_rounded_45dp_blue_main"
+            android:paddingStart="12dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="2dp"
+            android:text="@{postStudyRecruit.recruitState}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_recruit_study_filed"
+            style="@style/customTextViewFontStyle.medium.S10.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:background="@drawable/shape_rounded_45dp_blue_light"
+            android:paddingStart="12dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="2dp"
+            android:text="@{postStudyRecruit.studyFiled}"
+            app:layout_constraintStart_toEndOf="@id/tv_recruit_state"
+            app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
+
+        <TextView
+            android:id="@+id/tv_recruit_study_location"
+            style="@style/customTextViewFontStyle.medium.S10.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:background="@drawable/shape_rounded_45dp_blue_light"
+            android:paddingStart="12dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="2dp"
+            android:text="@{postStudyRecruit.location}"
+            app:layout_constraintStart_toEndOf="@id/tv_recruit_study_filed"
+            app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
+
+        <TextView
+            android:id="@+id/tv_post_recruit_title"
+            style="@style/customTextViewFontStyle.Bold.S14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@{postStudyRecruit.postTitle}"
+            app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
+            app:layout_constraintTop_toBottomOf="@id/tv_recruit_state" />
+
+        <TextView
+            android:id="@+id/tv_post_recruit_date"
+            style="@style/customTextViewFontStyle.medium.S10.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{postStudyRecruit.date}"
+            app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
+            app:layout_constraintTop_toBottomOf="@id/tv_post_recruit_title" />
+
+        <TextView
+            android:id="@+id/tv_post_recruit_nickname"
+            style="@style/customTextViewFontStyle.medium.S10.gray_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@{postStudyRecruit.nickname}"
+            app:layout_constraintStart_toEndOf="@id/tv_post_recruit_date"
+            app:layout_constraintTop_toTopOf="@id/tv_post_recruit_date" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:dividerColor="@color/gray_50"
+            app:dividerThickness="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_post_recruit_date" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

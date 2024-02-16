@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.codelap.waglegamoon.ui.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_home_study_recruit"
+            app:destination="@id/navigation_home_study_recruit" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_matching"
         android:name="com.codelap.waglegamoon.ui.matching.MatchingFragment"
@@ -20,4 +24,9 @@
         android:name="com.codelap.waglegamoon.ui.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/navigation_home_study_recruit"
+        android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitFragment"
+        android:label="HomeStudyRecruitFragment"
+        tools:layout="@layout/fragment_home_study_recruit"/>
 </navigation>
