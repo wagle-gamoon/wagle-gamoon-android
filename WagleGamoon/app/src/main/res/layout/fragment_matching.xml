@@ -10,15 +10,132 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="매칭"
+            android:background="@drawable/shape_rounded_52dp_blue_main"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent" >
 
+            <TextView
+                style="@style/customTextViewFontStyle.Bold.S20"
+                android:layout_marginTop="57dp"
+                android:id="@+id/tv_matching_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="53dp"
+                android:text="Tnalxmsk"
+                android:gravity="center"
+                android:layout_marginEnd="53dp" />
+
+            <Button
+                android:id="@+id/btn_birth"
+                android:layout_width="0dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/shape_rounded_15dp_blue_light_stroke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="7dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_matching_nickname" />
+
+            <TextView
+                style="@style/customTextViewFontStyle.medium.S14.blue_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00년생  |       졸업생    "
+                app:layout_constraintStart_toStartOf="@id/btn_birth"
+                app:layout_constraintEnd_toEndOf="@id/btn_birth"
+                app:layout_constraintTop_toTopOf="@id/btn_birth"
+                app:layout_constraintBottom_toBottomOf="@id/btn_birth" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_contact_style"
+                style="@style/customTextViewFontStyle.medium.S14.white"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_rounded_18dp_blue_middle_light"
+                android:text="대면"
+                app:layout_constraintEnd_toStartOf="@+id/tv_profile_my_style"
+                app:layout_constraintTop_toBottomOf="@id/btn_birth" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_my_style"
+                style="@style/customTextViewFontStyle.medium.S14.white"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/shape_rounded_18dp_blue_main"
+                android:text="조언자"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_birth" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_profile_meet_style"
+                style="@style/customTextViewFontStyle.medium.S14.white"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/shape_rounded_18dp_blue_middle_light"
+                android:text="일회성"
+                app:layout_constraintStart_toEndOf="@id/tv_profile_my_style"
+                app:layout_constraintTop_toBottomOf="@id/btn_birth" />
+
+            <TextView
+                android:id="@+id/tv_study_filed"
+                style="@style/customTextViewFontStyle.medium.S14.white"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_18dp_blue_main"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_my_style"
+                android:text="안드로이드/개발"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="26dp" />
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_rematch_button"
+                android:text="재매칭하기"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:background="@drawable/shape_rounded_8dp_blue_deep"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_study_filed"
+                android:layout_marginTop="69dp" />
+
+            <Button
+                android:id="@+id/btn_matching_success"
+                style="@style/customTextViewFontStyle.Bold.S16.black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_30dp_blue_main"
+                android:text="매칭 성공 룰렛 돌리러 가기"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_rematch_button"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingTop="23dp"
+                android:paddingBottom="23dp"
+                android:layout_marginBottom="23dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
