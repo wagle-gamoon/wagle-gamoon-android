@@ -1,4 +1,4 @@
-package com.codelap.waglegamoon.data.datasource
+package com.codelap.waglegamoon.data.datasource.user
 
 import android.content.ContentValues.TAG
 import android.util.Log

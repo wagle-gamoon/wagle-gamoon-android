@@ -1,4 +1,4 @@
-package com.codelap.waglegamoon.data.datasource
+package com.codelap.waglegamoon.data.datasource.user
 
 import com.codelap.waglegamoon.domain.model.DefaultResponse
 import com.codelap.waglegamoon.domain.model.UserSavedRequest

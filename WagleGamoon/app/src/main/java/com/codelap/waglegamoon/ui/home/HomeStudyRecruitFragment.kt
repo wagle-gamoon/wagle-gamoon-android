@@ -7,7 +7,9 @@ import com.codelap.waglegamoon.data.local.Datasource
 import com.codelap.waglegamoon.databinding.FragmentHomeStudyRecruitBinding
 import com.codelap.waglegamoon.ui.home.adapter.PostClickListener
 import com.codelap.waglegamoon.ui.home.adapter.StudyRecruitAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeStudyRecruitFragment : BaseFragment<FragmentHomeStudyRecruitBinding>(R.layout.fragment_home_study_recruit),
 PostClickListener {
     private val adapter = StudyRecruitAdapter(this)
