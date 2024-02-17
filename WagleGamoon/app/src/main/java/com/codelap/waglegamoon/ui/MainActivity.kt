@@ -7,7 +7,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.codelap.waglegamoon.R
 import com.codelap.waglegamoon.base.BaseActivity
 import com.codelap.waglegamoon.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun setLayout() {
         setBottomNavigation()

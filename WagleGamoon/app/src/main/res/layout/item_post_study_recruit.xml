@@ -5,7 +5,7 @@
     <data>
         <variable
             name="postStudyRecruit"
-            type="com.codelap.waglegamoon.data.model.PostStudyRecruit" />
+            type="com.codelap.waglegamoon.domain.model.PostStudyRecruit" />
         <variable
             name="listener"
             type="com.codelap.waglegamoon.ui.home.adapter.PostClickListener" />

@@ -24,7 +24,11 @@
         android:id="@+id/navigation_matching"
         android:name="com.codelap.waglegamoon.ui.matching.MatchingFragment"
         android:label="MatchingFragment"
-        tools:layout="@layout/fragment_matching"/>
+        tools:layout="@layout/fragment_matching">
+        <action
+            android:id="@+id/action_navigation_matching_to_navigation_matching_rock_paper_scissorsFragmen"
+            app:destination="@id/navigation_matching_rock_paper_scissorsFragmen" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.codelap.waglegamoon.ui.profile.ProfileFragment"
@@ -62,6 +66,11 @@
         android:name="com.codelap.waglegamoon.ui.home.HomePostDetailActivity"
         android:label="HomePostDetailActivity"
         tools:layout="@layout/activity_home_post_detail"/>
+    <fragment
+        android:id="@+id/navigation_matching_rock_paper_scissorsFragmen"
+        android:name="com.codelap.waglegamoon.ui.matching.MatchingRockPaperScissorsFragment"
+        android:label="MatchingRockPaperScissorsFragment"
+        tools:layout="@layout/fragment_matching_rock_paper_scissors_fragment"/>
 
 
 </navigation>
