@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.codelap.waglegamoon.domain.model.DefaultResponse
+import com.codelap.waglegamoon.domain.model.PostListResponse
 import com.codelap.waglegamoon.domain.model.PostSaveDto
 import com.codelap.waglegamoon.domain.model.UserSavedRequest
 import com.codelap.waglegamoon.domain.repository.HomeRepository
@@ -11,11 +12,10 @@ import com.codelap.waglegamoon.domain.repository.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import java.lang.Exception
 import javax.inject.Inject
+import kotlin.Exception
 
 @HiltViewModel
 class HomeViewModel @Inject constructor (
@@ -26,6 +26,8 @@ class HomeViewModel @Inject constructor (
     val postResult: StateFlow<DefaultResponse> = _postResult
     private val _defaultResult = MutableStateFlow(DefaultResponse())
     val defaultResult: StateFlow<DefaultResponse> = _defaultResult
+    private val _postList = MutableStateFlow(PostListResponse(data = emptyList()))
+    val postList: StateFlow<PostListResponse> = _postList
 
     fun postPosts(
         userId: Long, categorySort: String, title: String,
@@ -57,6 +59,18 @@ class HomeViewModel @Inject constructor (
 
             } catch (e: Exception) {
                 Log.e("Post Users Error", e.message.toString())
+            }
+        }
+    }
+
+    fun getPosts(categoryId: Long) {
+        viewModelScope.launch {
+            try {
+                repository.getPosts(categoryId).collectLatest {
+                    _postList.value = it
+                }
+            } catch (e: Exception) {
+                Log.e("Get Posts Error", e.message.toString())
             }
         }
     }

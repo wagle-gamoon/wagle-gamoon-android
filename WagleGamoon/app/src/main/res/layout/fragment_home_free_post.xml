@@ -53,7 +53,6 @@
             android:paddingTop="45dp"
             android:text="닉네임"
             android:textColor="#a9a9a9"
-            a:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
