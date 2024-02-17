@@ -5,5 +5,5 @@ import com.codelap.waglegamoon.domain.model.UserSavedRequest
 import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
-    fun postUsers(userSavedRequest: UserSavedRequest): Flow<DefaultResponse>
+    suspend fun postUsers(userSavedRequest: UserSavedRequest): Flow<DefaultResponse>
 }

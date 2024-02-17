@@ -9,5 +9,5 @@ import javax.inject.Inject
 class UserRepositoryImpl @Inject constructor(
     private val dataSource: UserDataSource
 ) : UserRepository {
-    override fun postUsers(userSavedRequest: UserSavedRequest): Flow<DefaultResponse> = dataSource.postUsers(userSavedRequest)
+    override suspend fun postUsers(userSavedRequest: UserSavedRequest): Flow<DefaultResponse> = dataSource.postUsers(userSavedRequest)
 }

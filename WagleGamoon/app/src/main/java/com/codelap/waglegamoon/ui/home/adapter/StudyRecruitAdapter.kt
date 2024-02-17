@@ -6,9 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.codelap.waglegamoon.domain.model.PostStudyRecruit
 import com.codelap.waglegamoon.databinding.ItemPostStudyRecruitBinding
+import com.codelap.waglegamoon.domain.model.PostResponseDto
 
 class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecruitViewHolder>() {
-    private val items = mutableListOf<PostStudyRecruit>()
+    private val items = mutableListOf<PostResponseDto>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudyRecruitViewHolder {
         return StudyRecruitViewHolder.from(parent)
@@ -20,7 +21,7 @@ class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerVie
         holder.bind(items[position], listener)
     }
 
-    fun update(posts: List<PostStudyRecruit>) {
+    fun update(posts: List<PostResponseDto>) {
         val diffUtil = StudyRecruitDiffUtil(items, posts)
         val result = DiffUtil.calculateDiff(diffUtil)
         items.clear()
@@ -29,8 +30,8 @@ class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerVie
     }
 
     class StudyRecruitDiffUtil(
-        private val oldItems: List<PostStudyRecruit>,
-        private val newItems: List<PostStudyRecruit>
+        private val oldItems: List<PostResponseDto>,
+        private val newItems: List<PostResponseDto>
     ) : DiffUtil.Callback() {
         override fun getOldListSize(): Int = oldItems.size
 
@@ -49,8 +50,8 @@ class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerVie
     }
 
     class StudyRecruitViewHolder(private val binding: ItemPostStudyRecruitBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: PostStudyRecruit, listener: PostClickListener) {
-            binding.postStudyRecruit = item
+        fun bind(item: PostResponseDto, listener: PostClickListener) {
+            binding.postResponseDto = item
             binding.listener = listener
         }
 

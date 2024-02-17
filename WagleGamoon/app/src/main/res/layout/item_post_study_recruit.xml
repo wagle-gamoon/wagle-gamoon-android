@@ -4,15 +4,15 @@
 
     <data>
         <variable
-            name="postStudyRecruit"
-            type="com.codelap.waglegamoon.domain.model.PostStudyRecruit" />
+            name="postResponseDto"
+            type="com.codelap.waglegamoon.domain.model.PostResponseDto" />
         <variable
             name="listener"
             type="com.codelap.waglegamoon.ui.home.adapter.PostClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:onClick="@{() -> listener.onClickPost()}"
+        android:onClick="@{() -> listener.onClickPost(postResponseDto.postId)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -28,7 +28,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="@{postStudyRecruit.recruitState}"
+            android:text="모집중"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +43,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="@{postStudyRecruit.studyFiled}"
+            android:text="개발"
             app:layout_constraintStart_toEndOf="@id/tv_recruit_state"
             app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
 
@@ -58,7 +58,7 @@
             android:paddingTop="2dp"
             android:paddingEnd="12dp"
             android:paddingBottom="2dp"
-            android:text="@{postStudyRecruit.location}"
+            android:text="성남"
             app:layout_constraintStart_toEndOf="@id/tv_recruit_study_filed"
             app:layout_constraintTop_toTopOf="@id/tv_recruit_state" />
 
@@ -68,7 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@{postStudyRecruit.postTitle}"
+            android:text="@{postResponseDto.title}"
             app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
             app:layout_constraintTop_toBottomOf="@id/tv_recruit_state" />
 
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{postStudyRecruit.date}"
+            android:text="오늘 14:30}"
             app:layout_constraintStart_toStartOf="@id/tv_recruit_state"
             app:layout_constraintTop_toBottomOf="@id/tv_post_recruit_title" />
 
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
-            android:text="@{postStudyRecruit.nickname}"
+            android:text="@{postResponseDto.userNickname}"
             app:layout_constraintStart_toEndOf="@id/tv_post_recruit_date"
             app:layout_constraintTop_toTopOf="@id/tv_post_recruit_date" />
 
