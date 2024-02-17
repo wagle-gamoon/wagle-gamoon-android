@@ -1,4 +1,4 @@
-package com.codelap.waglegamoon.data.model
+package com.codelap.waglegamoon.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

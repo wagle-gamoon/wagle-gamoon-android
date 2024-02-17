@@ -44,8 +44,14 @@
 
 
     <!--  Regular font  -->
+    <style name="customTextViewFontStyle.S11">
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="customTextViewFontStyle.S11.gray_30">
+        <item name="android:textColor">@color/gray_30</item>
+    </style>
     <style name="customTextViewFontStyle.S12">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
     <style name="customTextViewFontStyle.S14">
         <item name="android:textSize">14sp</item>
@@ -79,8 +85,26 @@
     <style name="customTextViewFontStyle.medium.S14">
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="customTextViewFontStyle.medium.S14.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
     <style name="customTextViewFontStyle.medium.S14.gray_50">
         <item name="android:textColor">@color/gray_50</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S14.blue_main">
+        <item name="android:textColor">@color/blue_main</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S16.black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S17">
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="customTextViewFontStyle.medium.S17.black">
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="customTextViewFontStyle.medium.S18">
         <item name="android:textSize">18sp</item>
@@ -93,6 +117,15 @@
     </style>
     <style name="customTextViewFontStyle.Bold.S14">
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="customTextViewFontStyle.Bold.S16">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="customTextViewFontStyle.Bold.S16.black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="customTextViewFontStyle.Bold.S20">
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

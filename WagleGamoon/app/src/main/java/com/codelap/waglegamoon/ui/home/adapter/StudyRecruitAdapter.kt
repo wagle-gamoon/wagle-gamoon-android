@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.codelap.waglegamoon.data.model.PostStudyRecruit
+import com.codelap.waglegamoon.domain.model.PostStudyRecruit
 import com.codelap.waglegamoon.databinding.ItemPostStudyRecruitBinding
 
-class StudyRecruitAdapter : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecruitViewHolder>() {
+class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecruitViewHolder>() {
     private val items = mutableListOf<PostStudyRecruit>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudyRecruitViewHolder {
@@ -17,7 +17,7 @@ class StudyRecruitAdapter : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecrui
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: StudyRecruitViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(items[position], listener)
     }
 
     fun update(posts: List<PostStudyRecruit>) {
@@ -49,8 +49,9 @@ class StudyRecruitAdapter : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecrui
     }
 
     class StudyRecruitViewHolder(private val binding: ItemPostStudyRecruitBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: PostStudyRecruit) {
+        fun bind(item: PostStudyRecruit, listener: PostClickListener) {
             binding.postStudyRecruit = item
+            binding.listener = listener
         }
 
         companion object {

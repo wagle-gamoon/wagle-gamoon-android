@@ -17,14 +17,18 @@
             android:id="@+id/action_home_to_home_question_post"
             app:destination="@id/navigation_home_question_post" />
      <action
-            android:id="@+id/action_navigation_home_to_navigation_home_study_recruit"
+            android:id="@+id/action_home_to_home_study_recruit"
             app:destination="@id/navigation_home_study_recruit" />
     </fragment>
     <fragment
         android:id="@+id/navigation_matching"
         android:name="com.codelap.waglegamoon.ui.matching.MatchingFragment"
         android:label="MatchingFragment"
-        tools:layout="@layout/fragment_matching"/>
+        tools:layout="@layout/fragment_matching">
+        <action
+            android:id="@+id/action_navigation_matching_to_navigation_matching_rock_paper_scissorsFragmen"
+            app:destination="@id/navigation_matching_rock_paper_scissorsFragmen" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.codelap.waglegamoon.ui.profile.ProfileFragment"
@@ -44,6 +48,29 @@
         android:id="@+id/navigation_home_study_recruit"
         android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitFragment"
         android:label="HomeStudyRecruitFragment"
-        tools:layout="@layout/fragment_home_study_recruit"/>
+        tools:layout="@layout/fragment_home_study_recruit">
+        <action
+            android:id="@+id/action_home_study_recruit_to_home_study_recruit_write"
+            app:destination="@id/navigation_home_study_recruit_write" />
+     <action
+         android:id="@+id/action_home_study_recruit_to_home_post_detail"
+         app:destination="@id/navigation_home_ost_detail" />
+ </fragment>
+    <activity
+        android:id="@+id/navigation_home_study_recruit_write"
+        android:name="com.codelap.waglegamoon.ui.home.HomeStudyRecruitWriteActivity"
+        android:label="HomeStudyRecruitWriteActivity"
+        tools:layout="@layout/activity_home_study_recruit_write"/>
+    <activity
+        android:id="@+id/navigation_home_ost_detail"
+        android:name="com.codelap.waglegamoon.ui.home.HomePostDetailActivity"
+        android:label="HomePostDetailActivity"
+        tools:layout="@layout/activity_home_post_detail"/>
+    <fragment
+        android:id="@+id/navigation_matching_rock_paper_scissorsFragmen"
+        android:name="com.codelap.waglegamoon.ui.matching.MatchingRockPaperScissorsFragment"
+        android:label="MatchingRockPaperScissorsFragment"
+        tools:layout="@layout/fragment_matching_rock_paper_scissors_fragment"/>
+
 
 </navigation>

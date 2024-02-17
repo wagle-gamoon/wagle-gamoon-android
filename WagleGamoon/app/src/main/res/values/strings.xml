@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Wagle Gamoon</string>
+    <string name="description_post_write_image">글쓰기 버튼</string>
 </resources>
