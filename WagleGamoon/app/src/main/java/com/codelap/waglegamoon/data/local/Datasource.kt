@@ -1,6 +1,6 @@
 package com.codelap.waglegamoon.data.local
 
-import com.codelap.waglegamoon.data.model.PostStudyRecruit
+import com.codelap.waglegamoon.domain.model.PostStudyRecruit
 
 object Datasource {
     fun getPostStudyList(): List<PostStudyRecruit> {

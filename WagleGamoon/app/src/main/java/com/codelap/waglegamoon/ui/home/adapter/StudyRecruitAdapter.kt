@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.codelap.waglegamoon.data.model.PostStudyRecruit
+import com.codelap.waglegamoon.domain.model.PostStudyRecruit
 import com.codelap.waglegamoon.databinding.ItemPostStudyRecruitBinding
 
 class StudyRecruitAdapter(private val listener: PostClickListener) : RecyclerView.Adapter<StudyRecruitAdapter.StudyRecruitViewHolder>() {
