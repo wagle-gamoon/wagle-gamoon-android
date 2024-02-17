@@ -8,4 +8,6 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(R.layout.fragment_p
     override fun setLayout() {
 
     }
+
+
 }
