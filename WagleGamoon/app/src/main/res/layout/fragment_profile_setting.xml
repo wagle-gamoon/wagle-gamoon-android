@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kw_reset"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/v_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="내 정보"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/customTextViewFontStyle.S20" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/usage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_rounded_15dp_white"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_usage"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="75dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="이용안내"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_web_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="웹 버전"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_usage" />
+
+        <TextView
+            android:id="@+id/tv_inquiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="문의하기"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_web_version" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_rounded_15dp_white"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyword_reset">
+
+        <TextView
+            android:id="@+id/tv_nick_setting"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="닉네임 설정"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password_change" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="38dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="계정"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/tv_password_change"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="비밀번호 변경"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_rpofile_image"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:text="프로필 이미지 변경"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nick_setting" />
+
+        <TextView
+            android:id="@+id/tv_email_change"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="프로필 이미지 변경"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rpofile_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/keyword_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_rounded_15dp_white"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_profile">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_ftf_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:text="대면"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_kewyord_resetting" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_nftf_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:text="비대면"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_profile_ftf_style"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_adviser_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/onclicked_btn"
+            android:text="조언자"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_profile_ftf_style" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_listener_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:text="경청자"
+            app:layout_constraintBottom_toTopOf="@+id/btn_profile_steadily_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_profile_adviser_style"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_nftf_style" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_of_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:text="일회성"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_adviser_style" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_profile_steadily_style"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/shape_rounded_15dp_blue_light"
+            android:text="꾸준히"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_profile_of_style"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_listener_style" />
+
+        <TextView
+            android:id="@+id/tv_matching_choice"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
+            android:text="매칭 비활성화"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_of_style" />
+
+        <TextView
+            android:id="@+id/tv_kewyord_resetting"
+            style="@style/customTextViewFontStyle.medium.S14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="키워드 재설정"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/matching_switch"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="12dp"
+            android:thumb="@drawable/switch_track_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_profile_of_style"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_steadily_style"
+            app:track="@drawable/switch_track_selector" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_profile"
+        app:layout_constraintStart_toStartOf="@+id/v_profile"
+        app:layout_constraintTop_toTopOf="@+id/v_profile"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -75,7 +75,7 @@
             app:layout_constraintTop_toBottomOf="@id/iv_profile_icon" >
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/tv_profile_contact_style"
+                android:id="@+id/btn_profile_contact_style"
                 style="@style/customTextViewFontStyle.medium.S14"
                 android:layout_width="wrap_content"
                 android:layout_height="27dp"
@@ -89,7 +89,7 @@
                 app:layout_constraintBottom_toBottomOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/tv_profile_my_style"
+                android:id="@+id/btn_profile_nftf_style"
                 style="@style/customTextViewFontStyle.medium.S14"
                 android:layout_width="wrap_content"
                 android:layout_height="27dp"
@@ -97,7 +97,7 @@
                 android:layout_marginBottom="28dp"
                 android:background="@drawable/shape_rounded_15dp_blue_light"
                 android:text="대면"
-                app:layout_constraintStart_toEndOf="@id/tv_profile_contact_style"
+                app:layout_constraintStart_toEndOf="@id/btn_profile_contact_style"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tv_profile_meet_style"
                 app:layout_constraintBottom_toBottomOf="parent" />
