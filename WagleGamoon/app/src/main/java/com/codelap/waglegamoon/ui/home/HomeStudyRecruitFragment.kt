@@ -7,10 +7,10 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.codelap.waglegamoon.R
 import com.codelap.waglegamoon.base.BaseFragment
-import com.codelap.waglegamoon.data.local.Datasource
 import com.codelap.waglegamoon.databinding.FragmentHomeStudyRecruitBinding
 import com.codelap.waglegamoon.ui.home.adapter.PostClickListener
 import com.codelap.waglegamoon.ui.home.adapter.StudyRecruitAdapter
+import com.codelap.waglegamoon.ui.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

@@ -8,6 +8,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.codelap.waglegamoon.R
 import com.codelap.waglegamoon.base.BaseActivity
 import com.codelap.waglegamoon.databinding.ActivityHomeStudyRecruitWriteBinding
+import com.codelap.waglegamoon.ui.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch

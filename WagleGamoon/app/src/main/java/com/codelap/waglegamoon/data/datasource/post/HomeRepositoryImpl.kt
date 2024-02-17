@@ -1,6 +1,7 @@
 package com.codelap.waglegamoon.data.datasource.post
 
 import com.codelap.waglegamoon.domain.model.DefaultResponse
+import com.codelap.waglegamoon.domain.model.PostInfoResponse
 import com.codelap.waglegamoon.domain.model.PostListResponse
 import com.codelap.waglegamoon.domain.model.PostSaveDto
 import com.codelap.waglegamoon.domain.repository.HomeRepository
@@ -12,4 +13,5 @@ class HomeRepositoryImpl @Inject constructor(
 ) : HomeRepository {
     override suspend fun postPosts(userId: Long, postSaveDto: PostSaveDto): Flow<DefaultResponse> = dataSource.postPosts(userId, postSaveDto)
     override suspend fun getPosts(categoryId: Long): Flow<PostListResponse> = dataSource.getPosts(categoryId)
+    override suspend fun getPostInfo(postId: Long): Flow<PostInfoResponse> = dataSource.getPostInfo(postId)
 }

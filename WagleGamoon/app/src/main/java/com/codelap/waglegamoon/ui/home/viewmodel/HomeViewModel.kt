@@ -1,9 +1,10 @@
-package com.codelap.waglegamoon.ui.home
+package com.codelap.waglegamoon.ui.home.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.codelap.waglegamoon.domain.model.DefaultResponse
+import com.codelap.waglegamoon.domain.model.PostInfoResponse
 import com.codelap.waglegamoon.domain.model.PostListResponse
 import com.codelap.waglegamoon.domain.model.PostSaveDto
 import com.codelap.waglegamoon.domain.model.UserSavedRequest
@@ -28,6 +29,8 @@ class HomeViewModel @Inject constructor (
     val defaultResult: StateFlow<DefaultResponse> = _defaultResult
     private val _postList = MutableStateFlow(PostListResponse(data = emptyList()))
     val postList: StateFlow<PostListResponse> = _postList
+    private val _postInfo = MutableStateFlow(PostInfoResponse(data = null))
+    val postInfo: StateFlow<PostInfoResponse> = _postInfo
 
     fun postPosts(
         userId: Long, categorySort: String, title: String,
@@ -71,6 +74,14 @@ class HomeViewModel @Inject constructor (
                 }
             } catch (e: Exception) {
                 Log.e("Get Posts Error", e.message.toString())
+            }
+        }
+    }
+
+    fun getPostInfo(postId: Long) {
+        viewModelScope.launch {
+            repository.getPostInfo(postId).collectLatest {
+                _postInfo.value = it
             }
         }
     }

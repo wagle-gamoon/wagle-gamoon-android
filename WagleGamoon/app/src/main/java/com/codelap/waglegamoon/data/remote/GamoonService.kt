@@ -1,6 +1,7 @@
 package com.codelap.waglegamoon.data.remote
 
 import com.codelap.waglegamoon.domain.model.DefaultResponse
+import com.codelap.waglegamoon.domain.model.PostInfoResponse
 import com.codelap.waglegamoon.domain.model.PostListResponse
 import com.codelap.waglegamoon.domain.model.PostSaveDto
 import com.codelap.waglegamoon.domain.model.UserSavedRequest
@@ -17,6 +18,9 @@ interface GamoonService {
         @Path("userId") userId: Long,
         @Body postSaveDto: PostSaveDto
     ): DefaultResponse
+
+    @GET("posts/{postId}")
+    suspend fun getPostsInfo(@Path("postId") postId: Long): PostInfoResponse
 
     @GET("/posts")
     suspend fun getPosts(@Query("categoryId") categoryId: Long): PostListResponse

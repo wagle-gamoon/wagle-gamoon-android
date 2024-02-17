@@ -2,6 +2,7 @@ package com.codelap.waglegamoon.data.datasource.post
 
 import android.util.Log
 import com.codelap.waglegamoon.data.remote.GamoonService
+import com.codelap.waglegamoon.domain.model.PostInfoResponse
 import com.codelap.waglegamoon.domain.model.PostListResponse
 import com.codelap.waglegamoon.domain.model.PostSaveDto
 import kotlinx.coroutines.flow.Flow
@@ -23,5 +24,10 @@ class HomeDataSource @Inject constructor(
         emit(response)
     }.catch {
         Log.e("Get Posts Fauilure", it.message.toString())
+    }
+
+    fun getPostInfo(postId: Long): Flow<PostInfoResponse> = flow {
+        val response = gamoonService.getPostsInfo(postId)
+        emit(response)
     }
 }
